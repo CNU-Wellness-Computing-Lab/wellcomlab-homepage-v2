@@ -8,8 +8,9 @@ const fonts = {
     sm: "14px",
     md: "16px",
     lg: "20px",
+    llg: "24px",
     xl: "32px",
-    hero: "64px",
+    hero: "44px",
   },
 
   weight: {
@@ -17,6 +18,7 @@ const fonts = {
     medium: 500,
     semibold: 600,
     bold: 700,
+    extrabold: 900,
   },
 };
 

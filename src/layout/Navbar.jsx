@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/nav_logo.png";
 import fonts from "../styles/textStyles";
@@ -8,7 +8,9 @@ import colors from "../styles/colors";
 const NavWrapper = styled.nav`
   width: 100%;
   background: ${colors.black};
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 `;
 
 const NavInner = styled.div`
@@ -55,16 +57,22 @@ const Menu = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   color: ${colors.white};
   text-decoration: none;
   font-family: ${fonts.family.heading};
   font-weight: ${fonts.weight.semibold};
   font-size: ${fonts.size.md};
+  padding: 0px 8px;
   transition: opacity 0.2s ease;
 
   &:hover {
     opacity: 0.7;
+  }
+  &.active {
+  background: ${colors.white};
+  color: ${colors.black};
+  opacity: 1;
   }
 `;
 
