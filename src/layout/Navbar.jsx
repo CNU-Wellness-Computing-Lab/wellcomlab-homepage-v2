@@ -62,7 +62,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   font-family: ${fonts.family.heading};
   font-weight: ${fonts.weight.semibold};
-  font-size: ${fonts.size.md};
+  font-size: ${fonts.size.lg};
   padding: 0px 8px;
   transition: opacity 0.2s ease;
 
@@ -128,10 +128,11 @@ const MobileMenu = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 28px;
     width: 100%;
+    box-sizing: border-box;
     background: ${colors.black};
-    padding: ${({ $isOpen }) => ($isOpen ? "0 24px 24px 24px" : "0 24px")};
+    padding: ${({ $isOpen }) => ($isOpen ? "12px 24px 24px 24px" : "0 24px")};
     max-height: ${({ $isOpen }) => ($isOpen ? "300px" : "0")};
     opacity: ${({ $isOpen }) => ($isOpen ? "1" : "0")};
     overflow: hidden;
@@ -147,7 +148,7 @@ const MobileLink = styled(Link)`
   text-decoration: none;
   font-family: ${fonts.family.heading};
   font-weight: ${fonts.weight.semibold};
-  font-size: ${fonts.size.md};
+  font-size: ${fonts.size.lg};
   transition: opacity 0.2s ease;
 
   &:hover {
