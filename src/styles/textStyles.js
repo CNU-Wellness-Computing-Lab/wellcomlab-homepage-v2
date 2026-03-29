@@ -9,7 +9,7 @@ const fonts = {
     md: "16px",
     lg: "18px",
     llg: "22px",
-    xl: "32px",
+    xl: "30px",
     hero: "44px",
   },
 

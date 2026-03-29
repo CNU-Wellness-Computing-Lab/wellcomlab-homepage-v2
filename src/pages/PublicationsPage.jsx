@@ -8,8 +8,6 @@ const Section = styled.section`
   margin: 0 auto;
   padding: 50px 60px;
   height: 100%;
-  // min-height: 100vh;
-  // box-sizing: border-box;
   background-color: ${colors.backgroundGray};
 
   @media (max-width: 768px) {
