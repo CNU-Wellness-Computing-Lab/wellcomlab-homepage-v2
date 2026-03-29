@@ -5,8 +5,10 @@ const colors = {
   // text: "#2b2b2bff",
   text: "#2b2b2bff",
   textMuted: "#3d3d3dff",
+  red:"#ee2828ff",
 
   background: "#F5F5F5",
+  baclground:"#EFEFEF",
   border: "#E5E4E7",
 
   primary: "#447269",

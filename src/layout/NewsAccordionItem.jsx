@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import fonts from "../styles/textStyles";
 import colors from "../styles/colors";
-import { formatDate } from "./Utils"; 
+import { formatDate } from "./Utils";
 
 const NewsItem = styled.article`
   border-bottom: 1px solid #7d7d7d;
@@ -11,7 +11,7 @@ const NewsHeader = styled.button`
   width: 100%;
   background: none;
   border: none;
-  padding: 18px 0;
+  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,14 +22,14 @@ const NewsHeader = styled.button`
 
 const NewsTitle = styled.h3`
   margin: 0;
-  font-size: ${fonts.size.llg};
+  font-size: ${fonts.size.lg};
   font-family: ${fonts.family.heading};
-  font-weight: ${fonts.weight.semibold};
+  font-weight: ${fonts.weight.bold};
   color: ${colors.text};
   line-height: 1.3;
 
   @media (max-width: 900px) {
-    font-size: ${fonts.size.llg};
+    font-size: ${fonts.size.lg};
   }
 `;
 
@@ -42,7 +42,7 @@ const ToggleIcon = styled.span`
   transition: all 0.2s ease;
 
   @media (max-width: 900px) {
-    font-size: 40px;
+    font-size: 28px;
   }
 `;
 
@@ -66,7 +66,7 @@ const NewsDate = styled.p`
 
 const NewsContent = styled.p`
   margin: 0;
-  font-size: 20px;
+  font-size: ${fonts.size.sm};
   line-height: 1.4;
   color: ${colors.text};
   white-space: pre-line;
