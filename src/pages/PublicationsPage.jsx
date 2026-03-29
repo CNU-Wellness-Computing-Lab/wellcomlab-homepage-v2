@@ -7,12 +7,13 @@ const Section = styled.section`
   max-width: 1400px;
   margin: 0 auto;
   padding: 50px 60px;
-  min-height: 100vh;
-  box-sizing: border-box;
+  height: 100%;
+  // min-height: 100vh;
+  // box-sizing: border-box;
   background-color: ${colors.backgroundGray};
 
   @media (max-width: 768px) {
-    padding: 100px 30px;
+    padding: 40px 30px;
   }
 `;
 
@@ -26,6 +27,7 @@ const PageTitle = styled.h1`
 
   @media (max-width: 768px) {
     margin-bottom: 40px;
+    font-size: ${fonts.size.xl};
   }
 `;
 
