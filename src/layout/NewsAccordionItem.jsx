@@ -11,7 +11,7 @@ const NewsHeader = styled.button`
   width: 100%;
   background: none;
   border: none;
-  padding: 8px 0;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@ const NewsTitle = styled.h3`
   margin: 0;
   font-size: ${fonts.size.lg};
   font-family: ${fonts.family.heading};
-  font-weight: ${fonts.weight.bold};
+  font-weight: ${fonts.weight.semibold};
   color: ${colors.text};
   line-height: 1.3;
 
@@ -72,7 +72,7 @@ const NewsContent = styled.p`
   white-space: pre-line;
 
   @media (max-width: 900px) {
-    font-size: 17px;
+    font-size:  ${fonts.size.md};
   }
 `;
 

@@ -18,7 +18,7 @@ const fonts = {
     medium: 500,
     semibold: 600,
     bold: 700,
-    extrabold: 900,
+    extrabold: 800,
   },
 };
 
