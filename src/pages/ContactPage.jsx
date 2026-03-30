@@ -115,6 +115,8 @@ const InfoCard = styled.div`
   max-width: 620px;
   border: 1px solid #d7d7d7;
   border-radius: 20px;
+  box-sizing: border-box;
+
   background-color: rgba(255, 255, 255, 0.35);
 
   @media (max-width: 768px) {
@@ -191,7 +193,7 @@ export default function ContactPage() {
             </Address>
 
             <MapButton
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/search/?api=1&query=W2+Chungnam+National+University+Daejeon"
               target="_blank"
               rel="noopener noreferrer"
             >

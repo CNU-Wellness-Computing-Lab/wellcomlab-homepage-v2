@@ -3,7 +3,9 @@ import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 
 function sortByName(a, b) {
-  return a.name.localeCompare(b.name);
+  const nameA = a?.name ?? "";
+  const nameB = b?.name ?? "";
+  return nameA.localeCompare(nameB);
 }
 
 export default function useMembers() {
@@ -43,25 +45,21 @@ export default function useMembers() {
   const professor = useMemo(() => {
     return activeMembers
       .filter((member) => member.degree === "Professor")
-      .sort(sortByName);
   }, [activeMembers]);
 
   const phdStudents = useMemo(() => {
     return activeMembers
       .filter((member) => member.degree === "Ph.D. Students")
-      .sort(sortByName);
   }, [activeMembers]);
 
   const msStudents = useMemo(() => {
     return activeMembers
       .filter((member) => member.degree === "Master's Students")
-      .sort(sortByName);
   }, [activeMembers]);
 
   const undergraduateInterns = useMemo(() => {
     return activeMembers
       .filter((member) => member.degree === "Undergraduate Intern")
-      .sort(sortByName);
   }, [activeMembers]);
 
   const alumni = useMemo(() => {

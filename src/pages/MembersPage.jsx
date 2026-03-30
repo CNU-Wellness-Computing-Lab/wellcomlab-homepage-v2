@@ -1,26 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import styled from "styled-components";
 import useMembers from "../hooks/useMembers";
 import MemberSection from "../layout/MemberSection";
 
-
 const Section = styled.section`
   width: 100%;
 `;
-
-function preloadImage(src) {
-  return new Promise((resolve) => {
-    if (!src) {
-      resolve();
-      return;
-    }
-
-    const img = new Image();
-    img.src = src;
-    img.onload = () => resolve();
-    img.onerror = () => resolve();
-  });
-}
 
 export default function MembersPage() {
   const {
@@ -32,8 +17,6 @@ export default function MembersPage() {
     alumni,
   } = useMembers();
 
-  const [imagesReady, setImagesReady] = useState(false);
-
   const memberSections = useMemo(() => {
     return [
       { title: "Professor", members: professor },
@@ -44,23 +27,7 @@ export default function MembersPage() {
     ].filter((section) => section.members && section.members.length > 0);
   }, [professor, phdStudents, msStudents, undergraduateInterns, alumni]);
 
-  useEffect(() => {
-    async function preloadAllImages() {
-      if (loading) return;
-
-      const allMembers = memberSections.flatMap((section) => section.members);
-      const imageUrls = allMembers
-        .filter((member) => member.profileUrl)
-        .map((member) => member.profileUrl);
-
-      await Promise.all(imageUrls.map(preloadImage));
-      setImagesReady(true);
-    }
-
-    preloadAllImages();
-  }, [loading, memberSections]);
-
-  if (loading || !imagesReady) {
+  if (loading) {
     return <Section>Loading...</Section>;
   }
 
