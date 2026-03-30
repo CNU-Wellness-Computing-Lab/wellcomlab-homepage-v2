@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import styled from "styled-components";
 
+
 const LayoutWrapper = styled.div`
   min-height: 100vh;
   height: 100%;

@@ -3,13 +3,18 @@ import colors from "../styles/colors";
 import fonts from "../styles/textStyles";
 import usePublications from "../hooks/usePublications";
 
+const SectionWrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  background-color: ${colors.backgroundGray};
+`;
+
 const Section = styled.section`
   max-width: 1400px;
   margin: 0 auto;
   padding: 50px 60px;
   height: 100%;
   background-color: ${colors.backgroundGray};
-
   @media (max-width: 768px) {
     padding: 40px 30px;
   }
@@ -112,6 +117,7 @@ export default function PublicationsPage() {
   const { loading, filteredPublications } = usePublications();
 
   return (
+    <SectionWrapper>
     <Section>
       <PageTitle>Publications</PageTitle>
 
@@ -141,5 +147,6 @@ export default function PublicationsPage() {
         </PublicationList>
       )}
     </Section>
+    </SectionWrapper>
   );
 }

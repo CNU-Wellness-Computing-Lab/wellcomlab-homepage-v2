@@ -3,9 +3,9 @@ import styled from "styled-components";
 import useMembers from "../hooks/useMembers";
 import MemberSection from "../layout/MemberSection";
 
+
 const Section = styled.section`
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
 `;
 
 function preloadImage(src) {

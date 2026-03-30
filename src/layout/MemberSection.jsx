@@ -4,14 +4,20 @@ import fonts from "../styles/textStyles";
 import colors from "../styles/colors";
 
 const SectionWrapper = styled.section`
-  padding: 60px 60px;
+  width: 100%;
   background-color: ${({ $index }) =>
     $index % 2 === 0 ? colors.backgroundGray : colors.white};
+`;
 
+const SectionInner = styled.div`
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 60px 60px;
   @media (max-width: 768px) {
     padding: 30px 30px;
   }
 `;
+
 
 const SectionTitle = styled.h2`
   margin: 0 0 36px;
@@ -171,7 +177,8 @@ export default function MemberSection({ title, members, index }) {
   }
 
   return (
-    <SectionWrapper $index={index}>
+    <SectionWrapper $index={index}> 
+    <SectionInner>
       <SectionTitle>{title}</SectionTitle>
 
       <MemberList $isAlumni={isAlumni}>
@@ -236,6 +243,7 @@ export default function MemberSection({ title, members, index }) {
           )
         )}
       </MemberList>
+      </SectionInner>
     </SectionWrapper>
   );
 }

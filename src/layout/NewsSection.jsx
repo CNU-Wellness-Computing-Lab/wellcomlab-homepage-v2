@@ -4,12 +4,17 @@ import useNews from "../hooks/useNews";
 import NewsSidebar from "./NewsSidebar"; 
 import NewsAccordionItem from "./NewsAccordionItem";
 
+const SectionWrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  background-color: ${colors.backgroundGray};
+`;
+
 const Section = styled.section`
   max-width: 1400px;
   margin: 0 auto;
   padding: 100px 60px;
   background-color: ${colors.backgroundGray};
-
   @media (max-width: 768px) {
     padding: 100px 30px;
   }
@@ -47,6 +52,7 @@ export default function NewsSection() {
   } = useNews();
 
   return (
+    <SectionWrapper>
     <Section>
       <Layout>
         <NewsSidebar
@@ -75,5 +81,6 @@ export default function NewsSection() {
         </div>
       </Layout>
     </Section>
+    </SectionWrapper>
   );
 }

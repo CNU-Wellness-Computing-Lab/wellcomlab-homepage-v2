@@ -3,12 +3,18 @@ import colors from "../styles/colors";
 import fonts from "../styles/textStyles";
 import useProjects from "../hooks/useProjects";
 
+const SectionWrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  background-color: ${colors.backgroundGray};
+`;
+
+
 const Section = styled.section`
   max-width: 1400px;
   margin: 0 auto;
   padding: 50px 60px;
   height: 100%;
-  background-color: ${colors.backgroundGray};
 
   @media (max-width: 768px) {
     padding: 40px 30px;
@@ -129,6 +135,7 @@ export default function ProjectsPage() {
   const { loading, projects } = useProjects();
 
   return (
+    <SectionWrapper>
     <Section>
       <PageTitle>Projects</PageTitle>
 
@@ -163,5 +170,6 @@ export default function ProjectsPage() {
         </ProjectList>
       )}
     </Section>
+    </SectionWrapper>
   );
 }
