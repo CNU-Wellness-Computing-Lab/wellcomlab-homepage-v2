@@ -22,6 +22,7 @@ const rotate = keyframes`
 const Section = styled.section`
   position: relative;
   width: 100%;
+  height: 100%;
   min-height: 520px;
   overflow: hidden;
 `;
@@ -187,7 +188,7 @@ const Highlight = styled.span`
   margin: 0 2px;
   padding: 5px 12px;
   border-radius: 999px;
-  background: #5b7f73;
+  background: #104a3bff;
   color: white;
   font-weight: ${fonts.weight.semibold};
 `;

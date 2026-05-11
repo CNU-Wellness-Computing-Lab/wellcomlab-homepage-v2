@@ -7,16 +7,17 @@ import colors from "../styles/colors";
 
 const NavWrapper = styled.nav`
   width: 100%;
-  background: ${colors.black};
+  background: ${colors.white};
   position: sticky;
   top: 0;
   z-index: 1000;
+  // box-shadow: 0 10px 20px rgba(119, 119, 119, 0.09);
 `;
 
 const NavInner = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 14px 24px;
 
   display: flex;
   justify-content: space-between;
@@ -34,7 +35,7 @@ const Logo = styled(Link)`
 `;
 
 const LogoImg = styled.img`
-  height: 48px;
+  height: 54px;
   width: auto;
 
   @media (max-width: 768px) {
@@ -58,7 +59,7 @@ const Menu = styled.div`
 `;
 
 const StyledLink = styled(NavLink)`
-  color: ${colors.white};
+  color: ${colors.text};
   text-decoration: none;
   font-family: ${fonts.family.heading};
   font-weight: ${fonts.weight.semibold};
@@ -70,8 +71,8 @@ const StyledLink = styled(NavLink)`
     opacity: 0.7;
   }
   &.active {
-  background: ${colors.white};
-  color: ${colors.black};
+  background: ${colors.textLightMuted};
+  color: ${colors.white};
   opacity: 1;
   }
 `;
@@ -99,8 +100,8 @@ const IconBox = styled.div`
 const IconLine = styled.span`
   display: block;
   width: 24px;
-  height: 2px;
-  background: ${colors.white};
+  height: 3px;
+  background: ${colors.text};
   border-radius: 999px;
   transition: all 0.3s ease;
   transform-origin: center;
