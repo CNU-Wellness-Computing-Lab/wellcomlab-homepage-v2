@@ -13,7 +13,7 @@ const colors = {
   border: "#E5E4E7",
 
   primary: "#447269",
-  primaryLight: "#B9DED5",
+  primaryLight: "#c5e1daff",
 };
 
 export default colors;

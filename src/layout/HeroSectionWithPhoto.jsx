@@ -58,7 +58,7 @@ const HeroContent = styled.div`
 const Title = styled.h1`
   font-family: ${fonts.family.heading};
   font-weight: ${fonts.weight.bold};
-  font-size: clamp(20px, 3.5vw, 32px);
+  font-size: clamp(24px, 3.5vw, 32px);
   line-height: 1.2;
   color: ${colors.text};
   letter-spacing: -0.02em;
@@ -72,14 +72,14 @@ const Highlight = styled.span`
   padding: 3px 12px;
   border-radius: 999px;
   background: ${colors.text};
-  font-size: clamp(20px, 3.5vw, 28px);
+  font-size: clamp(22px, 3.5vw, 28px);
   color: white;
   font-weight: ${fonts.weight.bold};
 `;
 
 const SubTitle = styled.h2`
   font-family: ${fonts.family.heading};
-  font-size: clamp(20px, 3.5vw, 32px);
+  font-size: clamp(22px, 3.5vw, 32px);
   letter-spacing: -0.02em;
   line-height: 1.3;
   margin-top: 12px;
@@ -125,17 +125,13 @@ export default function HeroSectionWithPhoto() {
                 <Title>
             Welcome to <Highlight>WellcomLab</Highlight>
           </Title>
-
+{/* 
           <SubTitle>
             at Chungnam National University!
-          </SubTitle>
+          </SubTitle> */}
 
           <Description>
-            We explore AI-driven user experiences with generative and augmented
-            technologies, creating immersive and intuitive interactions. Our primary
-            goal is to enhance well-being through innovative HCI research. By
-            focusing on creating user-centered technology, we strive to make
-            meaningful contributions to both the field and individuals&apos; lives.
+            Wellness Computing Lab (Wellcom Lab) is a research group at Chungnam National University exploring how the latest AI technologies can help people live healthier and safer lives. We build intelligent systems that support better decision-making, assist daily life through humanoid robots, and provide personalized health support by analyzing biosignals, behaviors, and environmental data.
           </Description>
             </TextWrapper>
         </HeroContent>

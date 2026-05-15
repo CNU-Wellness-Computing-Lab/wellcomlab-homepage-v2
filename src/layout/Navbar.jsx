@@ -53,7 +53,7 @@ const Menu = styled.div`
   display: flex;
   gap: 24px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1108px) {
     display: none;
   }
 `;
@@ -71,7 +71,7 @@ const StyledLink = styled(NavLink)`
     opacity: 0.7;
   }
   &.active {
-  background: ${colors.textLightMuted};
+  background: ${colors.text};
   color: ${colors.white};
   opacity: 1;
   }
@@ -84,7 +84,7 @@ const MobileMenuIcon = styled.button`
   padding: 0;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1108px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +126,7 @@ const IconLine = styled.span`
 const MobileMenu = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1108px) {
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -194,10 +194,12 @@ export default function Navbar() {
 
         <RightSection>
           <Menu>
-            <StyledLink to="/publications">Publication</StyledLink>
-            <StyledLink to="/members">Members</StyledLink>
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/members">People</StyledLink>
+            <StyledLink to="/publications">Publications</StyledLink>
             <StyledLink to="/projects">Projects</StyledLink>
             <StyledLink to="/contact">Contact</StyledLink>
+            <StyledLink to="/playandtalk">Play&Talk</StyledLink>
           </Menu>
 
           <MenuIcon
@@ -208,17 +210,23 @@ export default function Navbar() {
       </NavInner>
 
       <MobileMenu $isOpen={isMobileMenuOpen}>
-        <MobileLink to="/publications" onClick={handleMobileMenuClose}>
-          Publication
+        <MobileLink to="/" onClick={handleMobileMenuClose}>
+          Home
         </MobileLink>
         <MobileLink to="/members" onClick={handleMobileMenuClose}>
-          Members
+          People
+        </MobileLink>
+        <MobileLink to="/publications" onClick={handleMobileMenuClose}>
+          Publications
         </MobileLink>
         <MobileLink to="/projects" onClick={handleMobileMenuClose}>
           Projects
         </MobileLink>
         <MobileLink to="/contact" onClick={handleMobileMenuClose}>
           Contact
+        </MobileLink>
+        <MobileLink to="/playandtalk" onClick={handleMobileMenuClose}>
+          Play & Talk
         </MobileLink>
       </MobileMenu>
     </NavWrapper>

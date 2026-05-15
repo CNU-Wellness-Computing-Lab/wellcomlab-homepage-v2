@@ -9,8 +9,10 @@ const fonts = {
     md: "16px",
     lg: "18px",
     llg: "22px",
+    lllg: "28px",
     xl: "30px",
     hero: "44px",
+    superhero: "60px",
   },
 
   weight: {
@@ -21,5 +23,4 @@ const fonts = {
     extrabold: 800,
   },
 };
-
 export default fonts;

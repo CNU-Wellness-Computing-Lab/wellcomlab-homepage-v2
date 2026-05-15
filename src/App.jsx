@@ -5,6 +5,9 @@ import PublicationsPage from "./pages/PublicationsPage";
 import MembersPage from "./pages/MembersPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import PlayAndTalkPage from "./pages/PlayAndTalkPage";
+import PlayAndTalkQPage from "./pages/PlayAndTalkQPage";
+import PlayAndTalkResultPage from "./pages/PlayAndTalkResult";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/members" element={<MembersPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/playandtalk" element={<PlayAndTalkPage />} />
+        <Route path="/playandtalk/questions" element={<PlayAndTalkQPage />} />
+        <Route path="/playandtalk/result" element={<PlayAndTalkResultPage />} />
       </Route>
     </Routes>
   );
