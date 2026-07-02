@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import colors from "../styles/colors";
 import fonts from "../styles/textStyles";
-import usePublications from "../hooks/usePublications";
+import { useEffect, useState } from "react";
+// import usePublications from "../hooks/usePublications";
 
 const SectionWrapper = styled.section`
   width: 100%;
@@ -114,39 +115,132 @@ function formatMeta(item) {
 }
 
 export default function PublicationsPage() {
-  const { loading, filteredPublications } = usePublications();
+
+  const [loading, setLoading] = useState(true);
+
+  const [publications, setPublications] = useState([]);
+
+  useEffect(() => {
+
+    fetch("/publications/publications.json")
+
+      .then((res) => res.json())
+
+      .then((data) => {
+
+        setPublications(data);
+
+      })
+
+      .catch((error) => {
+
+        console.error("Failed to load publications:", error);
+
+        setPublications([]);
+
+      })
+
+      .finally(() => {
+
+        setLoading(false);
+
+      });
+
+  }, []);
 
   return (
+
     <SectionWrapper>
-    <Section>
-      <PageTitle>Publications</PageTitle>
 
-      {loading ? (
-        <EmptyText>Loading...</EmptyText>
-      ) : filteredPublications.length === 0 ? (
-        <EmptyText>No publications yet.</EmptyText>
-      ) : (
-        <PublicationList>
-          {filteredPublications.map((item) => (
-            <PublicationItem key={item.id}>
-              <PublicationHeader type="button">
-                <PublicationInfo>
-                  <PublicationMeta>{formatMeta(item)}</PublicationMeta>
+      <Section>
 
-                  <PublicationTitle>{item.title}</PublicationTitle>
+        <PageTitle>Publications</PageTitle>
 
-                  <PublicationAuthors>
-                    {Array.isArray(item.authors)
-                      ? item.authors.join(", ")
-                      : item.authors}
-                  </PublicationAuthors>
-                </PublicationInfo>
-              </PublicationHeader>
-            </PublicationItem>
-          ))}
-        </PublicationList>
-      )}
-    </Section>
+        {loading ? (
+
+          <EmptyText>Loading...</EmptyText>
+
+        ) : publications.length === 0 ? (
+
+          <EmptyText>No publications yet.</EmptyText>
+
+        ) : (
+
+          <PublicationList>
+
+            {publications.map((item) => (
+
+              <PublicationItem key={item.id}>
+
+                <PublicationHeader>
+
+                  <PublicationInfo>
+
+                    <PublicationMeta>{formatMeta(item)}</PublicationMeta>
+
+                    <PublicationTitle>{item.title}</PublicationTitle>
+
+                    <PublicationAuthors>
+
+                      {Array.isArray(item.authors)
+
+                        ? item.authors.join(", ")
+
+                        : item.authors}
+
+                    </PublicationAuthors>
+
+                  </PublicationInfo>
+
+                </PublicationHeader>
+
+              </PublicationItem>
+
+            ))}
+
+          </PublicationList>
+        )}
+
+      </Section>
     </SectionWrapper>
   );
+
 }
+
+// export default function PublicationsPage() {
+//   const { loading, filteredPublications } = usePublications();
+
+//   return (
+//     <SectionWrapper>
+//     <Section>
+//       <PageTitle>Publications</PageTitle>
+
+//       {loading ? (
+//         <EmptyText>Loading...</EmptyText>
+//       ) : filteredPublications.length === 0 ? (
+//         <EmptyText>No publications yet.</EmptyText>
+//       ) : (
+//         <PublicationList>
+//           {filteredPublications.map((item) => (
+//             <PublicationItem key={item.id}>
+//               <PublicationHeader type="button">
+//                 <PublicationInfo>
+//                   <PublicationMeta>{formatMeta(item)}</PublicationMeta>
+
+//                   <PublicationTitle>{item.title}</PublicationTitle>
+
+//                   <PublicationAuthors>
+//                     {Array.isArray(item.authors)
+//                       ? item.authors.join(", ")
+//                       : item.authors}
+//                   </PublicationAuthors>
+//                 </PublicationInfo>
+//               </PublicationHeader>
+//             </PublicationItem>
+//           ))}
+//         </PublicationList>
+//       )}
+//     </Section>
+//     </SectionWrapper>
+//   );
+// }

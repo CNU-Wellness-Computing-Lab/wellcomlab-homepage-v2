@@ -1,0 +1,30 @@
+[
+  {
+    "id": "human-chatbot-interaction",
+    "year": "2026",
+    "name": "Human–Chatbot Interaction",
+    "description": "This project investigates AI-mediated communication systems for supporting interpersonal relationship mediation. It also examines how recommendation structures in multi-AI chatbot systems influence users’ decision-making processes.",
+    "thumbnail": "/projects/chatbot.png"
+  },
+  {
+    "id": "human-scent-robot-interaction",
+    "year": "2026",
+    "name": "Human–Scent/Robot Interaction",
+    "description": "This project explores user experiences with mobile robots that employ scent and wind interfaces. It also investigates AI chatbot systems combined with olfactory stimuli for preventing cognitive decline and supporting dementia prediction.",
+    "thumbnail": "/projects/scent.png"
+  },
+  {
+    "id": "human-robot-interaction",
+    "year": "2026",
+    "name": "Human–Robot Interaction",
+    "description": "This project examines multimodal persuasive robot design for the constructive use of dark patterns, user experience and acceptance of infant-care robots, and robot-mediated health behavior interventions based on activity and biosignal recognition.",
+    "thumbnail": "/projects/robot.png"
+  },
+  {
+    "id": "cognitive-load-adaptive-learning",
+    "year": "2023",
+    "name": "Cognitive Load Adaptive Learning Content Delivery System",
+    "description": "This project applied a driver cognitive-load inference algorithm to an in-vehicle content delivery system with the aim of improving learning efficiency while maintaining driving safety.",
+    "thumbnail": "/projects/cognitive-load.png"
+  }
+]

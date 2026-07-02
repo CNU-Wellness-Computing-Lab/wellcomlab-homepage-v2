@@ -1,0 +1,122 @@
+[
+  {
+    "id": "chi-2026-wind-olfactory-cues",
+    "year": "2026",
+    "venue": "ACM CHI Conference on Human Factors in Computing Systems",
+    "category": "Conference Paper",
+    "title": "When a Robot Communicates Through Air: Contextual Interpretations of Wind and Olfactory Cues",
+    "authors": ["Chaeeun Noh", "Jaejeung Kim"]
+  },
+  {
+    "id": "chi-2026-habittune",
+    "year": "2026",
+    "venue": "ACM CHI Conference on Human Factors in Computing Systems",
+    "category": "Conference Poster",
+    "title": "HabitTune: AI-Generated Personalized Children's Songs for Positive Habit Development",
+    "authors": ["Young Chang", "Haejin Park", "Uran Oh", "Jaejeung Kim"]
+  },
+  {
+    "id": "chi-2026-what-if",
+    "year": "2026",
+    "venue": "ACM CHI Conference on Human Factors in Computing Systems",
+    "category": "Conference Poster",
+    "title": "What-If: Supporting Smartphone Self-Regulation through Counterfactual Future Narratives",
+    "authors": ["Haeun Lee", "Jaehun Huh", "Sungwoo Han", "Gyuwon Jung", "Jaejeung Kim"]
+  },
+  {
+    "id": "ijhci-2025-vibration-duration-mutability",
+    "year": "2025",
+    "venue": "International Journal of Human–Computer Interaction",
+    "category": "Journal",
+    "title": "Understanding the Influence of Vibration Duration and Mutability on Behavioral Adherence Using Wrist-Worn Wearable Devices: A Mixed Methods Study",
+    "authors": ["Gyeyoung Jung", "Jaeyong Lee", "Jaejeung Kim"]
+  },
+  {
+    "id": "hci-korea-2025-remedi",
+    "year": "2025",
+    "venue": "한국 HCI 학회 학술대회",
+    "category": "Conference Paper",
+    "title": "Remedi: 복약지도 실습 교육을 위한 생성형 AI 기반 롤플레잉 시뮬레이션 어플리케이션",
+    "authors": ["노수진", "서지혜", "김은빈", "강유주", "정계영", "김재정"]
+  },
+  {
+    "id": "ubicomp-companion-2024-alarmcare",
+    "year": "2024",
+    "venue": "UbiComp Companion",
+    "category": "Conference Poster",
+    "title": "AlarmCare: Exploring Mobile Alarm as a Supportive Communication Channel Between Peers",
+    "authors": ["Seongsoo Kim", "Byeongju Kim", "Yuju Kang", "Minsam Ko", "Jaejeung Kim"]
+  },
+  {
+    "id": "kiise-2024-sleep-battery",
+    "year": "2024",
+    "venue": "한국정보과학회 학술발표논문집",
+    "category": "Conference Paper",
+    "title": "수면배터리: 실시간 예상 수면 품질 및 컨디션 시뮬레이션 통한 취침 전 스마트폰 사용 자제 유도 시스템",
+    "authors": ["정계영", "강유주", "이재용", "송민주", "김재정"]
+  },
+  {
+    "id": "ictc-2024-family-history-ai",
+    "year": "2024",
+    "venue": "15th International Conference on Information and Communication Technology Convergence",
+    "category": "Conference Paper",
+    "title": "A Family-History Based Conversational AI System Using LLM",
+    "authors": ["Mika Lim", "Jaebin Ku", "Gyeong-Hwan Oh", "Sinmin Lee", "Yuju Kang", "Jaejeung Kim"]
+  },
+  {
+    "id": "ubicomp-companion-2024-mylistener",
+    "year": "2024",
+    "venue": "UbiComp Companion",
+    "category": "Conference Poster",
+    "title": "MyListener: An AI-Mediated Journaling Mobile Application for Alleviating Depression and Loneliness Using Contextual Data",
+    "authors": ["Gyeyoung Jung", "Soyeon Choi", "Yuju Kang", "Jaejeung Kim"]
+  },
+  {
+    "id": "ictc-2023-chatgpt-healthcare",
+    "year": "2023",
+    "venue": "IEEE ICTC",
+    "category": "Conference Paper",
+    "title": "ChatGPT Powered Digital Healthcare System",
+    "authors": ["Jaeyong Lee", "Gyeyoung Jung", "Young Chang", "Yuju Kang", "Jaejeung Kim"]
+  },
+  {
+    "id": "ictc-2023-brush-up-with-ar",
+    "year": "2023",
+    "venue": "IEEE ICTC",
+    "category": "Conference Paper",
+    "title": "Brush Up with AR: Supporting Children’s Enjoyable Tooth-Brushing through Augmented Reality Feedback",
+    "authors": ["Yuju Kang", "Nari Kim", "Ellie Lee", "Gyeyoung Jung", "Jaeyong Lee", "SeungKyun Han", "Jaejeung Kim"]
+  },
+  {
+    "id": "hci-korea-2023-smart-speaker-medication",
+    "year": "2023",
+    "venue": "한국 HCI 학회 학술대회",
+    "category": "Conference Paper",
+    "title": "인공지능 스피커를 활용한 복약 지원 시스템의 설계 및 구현",
+    "authors": ["유찬휘", "이현진", "김재정"]
+  },
+  {
+    "id": "hci-korea-2023-human-vs-ai",
+    "year": "2023",
+    "venue": "한국 HCI 학회 학술대회",
+    "category": "Conference Paper",
+    "title": "Human VS AI: 원격 진료 어플리케이션에서 처방 주체에 대한 신뢰성이 처방 순응도에 미치는 영향",
+    "authors": ["복신영", "강유주", "정계영", "김재정"]
+  },
+  {
+    "id": "hci-korea-2023-driver-cognitive-load",
+    "year": "2023",
+    "venue": "한국 HCI 학회 학술대회",
+    "category": "Conference Paper",
+    "title": "스마트폰 다중 센서 기반 운전자의 실시간 인지 부하 정량화",
+    "authors": ["이재용", "정계영", "김성수", "김재정"]
+  },
+  {
+    "id": "ictc-2023-smart-speaker-lamp",
+    "year": "2023",
+    "venue": "IEEE ICTC",
+    "category": "Conference Paper",
+    "title": "A Smart Speaker Lamp for Assisting Bedtime Smartphone Non-Use: A Feasibility Study",
+    "authors": ["Gyeyoung Jung", "Seungsu Kim", "Minju Song", "Yuju Kang", "Jaeyong Lee", "Jaejeung Kim"]
+  }
+]

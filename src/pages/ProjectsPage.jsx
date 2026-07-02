@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../styles/colors";
 import fonts from "../styles/textStyles";
-import useProjects from "../hooks/useProjects";
+import { useEffect, useState } from "react";
 
 const SectionWrapper = styled.section`
   width: 100%;
@@ -132,44 +132,102 @@ function formatMeta(project) {
 }
 
 export default function ProjectsPage() {
-  const { loading, projects } = useProjects();
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
 
-  return (
-    <SectionWrapper>
-    <Section>
-      <PageTitle>Projects</PageTitle>
+  useEffect(() => {
+    fetch("/projects/projects.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+      })
+      .catch((error) => {
+        console.error("Failed to load projects:", error);
+        setProjects([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-      {loading ? (
-        <EmptyText>Loading...</EmptyText>
-      ) : projects.length === 0 ? (
-        <EmptyText>No projects yet.</EmptyText>
-      ) : (
-        <ProjectList>
-          {projects.map((project) => (
-            <ProjectItem key={project.id}>
-              <ProjectHeader>
-                <Thumbnail
-                  src={project.thumbnail || "/projects/default-thumbnail.png"}
-                  alt={project.name}
-                  onError={(e) => {
-                    e.target.src = "/projects/default-thumbnail.png";
-                  }}
-                />
+  return (  <SectionWrapper>     
+  <Section>
+       <PageTitle>Projects</PageTitle>
 
-                <ProjectInfo>
-                  {formatMeta(project) && (
-                    <ProjectMeta>{formatMeta(project)}</ProjectMeta>
-                  )}
+       {loading ? (
+                 <EmptyText>Loading...</EmptyText>
+       ) : projects.length === 0 ? (
+         <EmptyText>No projects yet.</EmptyText>
+       ) : (
+         <ProjectList>
+           {projects.map((project) => (
+             <ProjectItem key={project.id}>
+               <ProjectHeader>
+                 <Thumbnail
+                   src={project.thumbnail || "/projects/default-thumbnail.png"}
+                   alt={project.name}
+                   onError={(e) => {
+                     e.target.src = "/projects/default-thumbnail.png";
+                   }}
+                 />
 
-                  <ProjectTitle>{project.name}</ProjectTitle>
-                  <ProjectDescription>{project.description}</ProjectDescription>
-                </ProjectInfo>
-              </ProjectHeader>
-            </ProjectItem>
-          ))}
-        </ProjectList>
-      )}
-    </Section>
-    </SectionWrapper>
-  );
-}
+                 <ProjectInfo>
+                   {formatMeta(project) && (
+                     <ProjectMeta>{formatMeta(project)}</ProjectMeta>
+                   )}
+                   <ProjectTitle>{project.name}</ProjectTitle>
+                   <ProjectDescription>{project.description}</ProjectDescription>
+                 </ProjectInfo>
+               </ProjectHeader>
+                            </ProjectItem>
+           ))}
+         </ProjectList>
+       )}
+     </Section>
+     </SectionWrapper>
+   );
+ }
+
+
+// export default function ProjectsPage() {
+//   const { loading, projects } = useProjects();
+
+//   return (
+//     <SectionWrapper>
+//     <Section>
+//       <PageTitle>Projects</PageTitle>
+
+//       {loading ? (
+//         <EmptyText>Loading...</EmptyText>
+//       ) : projects.length === 0 ? (
+//         <EmptyText>No projects yet.</EmptyText>
+//       ) : (
+//         <ProjectList>
+//           {projects.map((project) => (
+//             <ProjectItem key={project.id}>
+//               <ProjectHeader>
+//                 <Thumbnail
+//                   src={project.thumbnail || "/projects/default-thumbnail.png"}
+//                   alt={project.name}
+//                   onError={(e) => {
+//                     e.target.src = "/projects/default-thumbnail.png";
+//                   }}
+//                 />
+
+//                 <ProjectInfo>
+//                   {formatMeta(project) && (
+//                     <ProjectMeta>{formatMeta(project)}</ProjectMeta>
+//                   )}
+
+//                   <ProjectTitle>{project.name}</ProjectTitle>
+//                   <ProjectDescription>{project.description}</ProjectDescription>
+//                 </ProjectInfo>
+//               </ProjectHeader>
+//             </ProjectItem>
+//           ))}
+//         </ProjectList>
+//       )}
+//     </Section>
+//     </SectionWrapper>
+//   );
+// }

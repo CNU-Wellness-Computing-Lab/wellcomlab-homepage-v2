@@ -5,6 +5,12 @@ import logo from "../assets/nav_logo.png";
 import fonts from "../styles/textStyles";
 import colors from "../styles/colors";
 
+
+const BREAKPOINTS = {
+  mobile: "968px",
+  tablet: "1108px",
+};
+
 const NavWrapper = styled.nav`
   width: 100%;
   background: ${colors.white};
@@ -53,7 +59,7 @@ const Menu = styled.div`
   display: flex;
   gap: 24px;
 
-  @media (max-width: 1108px) {
+  @media (max-width: ${BREAKPOINTS.mobile}) {
     display: none;
   }
 `;
@@ -84,7 +90,7 @@ const MobileMenuIcon = styled.button`
   padding: 0;
   cursor: pointer;
 
-  @media (max-width: 1108px) {
+  @media (max-width: ${BREAKPOINTS.mobile}) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +132,7 @@ const IconLine = styled.span`
 const MobileMenu = styled.div`
   display: none;
 
-  @media (max-width: 1108px) {
+  @media (max-width: ${BREAKPOINTS.mobile}) {
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -199,7 +205,7 @@ export default function Navbar() {
             <StyledLink to="/publications">Publications</StyledLink>
             <StyledLink to="/projects">Projects</StyledLink>
             <StyledLink to="/contact">Contact</StyledLink>
-            <StyledLink to="/playandtalk">Play&Talk</StyledLink>
+            {/* <StyledLink to="/playandtalk">Play&Talk</StyledLink> */}
           </Menu>
 
           <MenuIcon
@@ -225,9 +231,9 @@ export default function Navbar() {
         <MobileLink to="/contact" onClick={handleMobileMenuClose}>
           Contact
         </MobileLink>
-        <MobileLink to="/playandtalk" onClick={handleMobileMenuClose}>
+        {/* <MobileLink to="/playandtalk" onClick={handleMobileMenuClose}>
           Play & Talk
-        </MobileLink>
+        </MobileLink> */}
       </MobileMenu>
     </NavWrapper>
   );
